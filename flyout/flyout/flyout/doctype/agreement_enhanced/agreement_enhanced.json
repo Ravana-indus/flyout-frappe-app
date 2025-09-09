@@ -1,0 +1,504 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:AGR-{provider}-{client_name}-{####}",
+ "creation": "2025-09-09 14:09:04.980749",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "agreement_title",
+  "tab_break_basic",
+  "inquiry_reference",
+  "col_break_1",
+  "agreement_template",
+  "section_break_parties",
+  "provider",
+  "provider_contact_person",
+  "provider_email",
+  "provider_phone",
+  "col_break_client",
+  "client",
+  "client_name",
+  "client_email",
+  "client_phone",
+  "section_break_agreement_details",
+  "agreement_type",
+  "service_type",
+  "agreement_status",
+  "col_break_dates",
+  "start_date",
+  "end_date",
+  "duration_months",
+  "section_break_financial",
+  "total_amount",
+  "currency",
+  "payment_terms_summary",
+  "col_break_financial",
+  "advance_payment_required",
+  "advance_percentage",
+  "auto_renewal",
+  "tab_break_content",
+  "agreement_content",
+  "section_break_clauses",
+  "agreement_clauses",
+  "tab_break_milestones",
+  "agreement_milestones",
+  "section_break_payment_summary",
+  "total_milestone_amount",
+  "outstanding_amount",
+  "paid_amount",
+  "tab_break_signatures",
+  "agreement_signatures",
+  "section_break_signature_status",
+  "all_parties_signed",
+  "final_signature_date",
+  "agreement_pdf",
+  "tab_break_communication",
+  "agreement_communications",
+  "section_break_amendment",
+  "has_pending_amendments",
+  "amendment_count",
+  "last_amendment_date",
+  "tab_break_workflow",
+  "section_break_workflow",
+  "created_by",
+  "approved_by",
+  "approval_date",
+  "col_break_workflow",
+  "requires_legal_review",
+  "legal_review_completed",
+  "legal_reviewer",
+  "section_break_notes",
+  "internal_notes",
+  "client_notes",
+  "provider_notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "description": "Auto-generated title for easy identification",
+   "fieldname": "agreement_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Agreement Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_break_basic",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "description": "Reference to the original inquiry",
+   "fieldname": "inquiry_reference",
+   "fieldtype": "Link",
+   "label": "Original Inquiry",
+   "options": "Inquiry"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Template used to generate this agreement",
+   "fieldname": "agreement_template",
+   "fieldtype": "Link",
+   "label": "Agreement Template",
+   "options": "Agreement Template"
+  },
+  {
+   "fieldname": "section_break_parties",
+   "fieldtype": "Section Break",
+   "label": "Agreement Parties"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Provider",
+   "options": "Provider",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider_contact_person",
+   "fieldtype": "Data",
+   "label": "Provider Contact Person"
+  },
+  {
+   "fieldname": "provider_email",
+   "fieldtype": "Data",
+   "label": "Provider Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "provider_phone",
+   "fieldtype": "Data",
+   "label": "Provider Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "col_break_client",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "client_phone",
+   "fieldtype": "Data",
+   "label": "Client Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "section_break_agreement_details",
+   "fieldtype": "Section Break",
+   "label": "Agreement Details"
+  },
+  {
+   "fieldname": "agreement_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agreement Type",
+   "options": "Agreement Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "label": "Service Type",
+   "options": "Service Types",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agreement_status",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Agreement Status",
+   "options": "Agreement Status",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_dates",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Agreement Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "Agreement End Date"
+  },
+  {
+   "fieldname": "duration_months",
+   "fieldtype": "Int",
+   "label": "Duration (Months)"
+  },
+  {
+   "fieldname": "section_break_financial",
+   "fieldtype": "Section Break",
+   "label": "Financial Terms"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Agreement Amount",
+   "reqd": 1
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "payment_terms_summary",
+   "fieldtype": "Text Editor",
+   "label": "Payment Terms Summary"
+  },
+  {
+   "fieldname": "col_break_financial",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "advance_payment_required",
+   "fieldtype": "Check",
+   "label": "Advance Payment Required"
+  },
+  {
+   "fieldname": "advance_percentage",
+   "fieldtype": "Percent",
+   "label": "Advance Payment %"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_renewal",
+   "fieldtype": "Check",
+   "label": "Auto Renewal"
+  },
+  {
+   "fieldname": "tab_break_content",
+   "fieldtype": "Tab Break",
+   "label": "Agreement Content"
+  },
+  {
+   "description": "Full agreement content with all terms and conditions",
+   "fieldname": "agreement_content",
+   "fieldtype": "Text Editor",
+   "label": "Agreement Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_clauses",
+   "fieldtype": "Section Break",
+   "label": "Agreement Clauses"
+  },
+  {
+   "description": "Individual clauses and terms of the agreement",
+   "fieldname": "agreement_clauses",
+   "fieldtype": "Table",
+   "label": "Clauses",
+   "options": "Agreement Clause Item"
+  },
+  {
+   "fieldname": "tab_break_milestones",
+   "fieldtype": "Tab Break",
+   "label": "Milestones & Payments"
+  },
+  {
+   "description": "Project milestones and payment schedule",
+   "fieldname": "agreement_milestones",
+   "fieldtype": "Table",
+   "label": "Project Milestones",
+   "options": "Agreement Milestone Item"
+  },
+  {
+   "fieldname": "section_break_payment_summary",
+   "fieldtype": "Section Break",
+   "label": "Payment Summary"
+  },
+  {
+   "fieldname": "total_milestone_amount",
+   "fieldtype": "Currency",
+   "label": "Total Milestone Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_signatures",
+   "fieldtype": "Tab Break",
+   "label": "Signatures"
+  },
+  {
+   "description": "All parties required to sign this agreement",
+   "fieldname": "agreement_signatures",
+   "fieldtype": "Table",
+   "label": "Required Signatures",
+   "options": "Agreement Signature Item"
+  },
+  {
+   "fieldname": "section_break_signature_status",
+   "fieldtype": "Section Break",
+   "label": "Signature Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "all_parties_signed",
+   "fieldtype": "Check",
+   "label": "All Parties Signed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "final_signature_date",
+   "fieldtype": "Datetime",
+   "label": "Final Signature Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "agreement_pdf",
+   "fieldtype": "Attach",
+   "label": "Signed Agreement PDF"
+  },
+  {
+   "fieldname": "tab_break_communication",
+   "fieldtype": "Tab Break",
+   "label": "Communication"
+  },
+  {
+   "description": "All communications related to this agreement",
+   "fieldname": "agreement_communications",
+   "fieldtype": "Table",
+   "label": "Communications",
+   "options": "Agreement Communication Item"
+  },
+  {
+   "fieldname": "section_break_amendment",
+   "fieldtype": "Section Break",
+   "label": "Amendment Tracking"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_pending_amendments",
+   "fieldtype": "Check",
+   "label": "Has Pending Amendments",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amendment_count",
+   "fieldtype": "Int",
+   "label": "Amendment Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_amendment_date",
+   "fieldtype": "Date",
+   "label": "Last Amendment Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_workflow",
+   "fieldtype": "Tab Break",
+   "label": "Workflow & Tracking"
+  },
+  {
+   "fieldname": "section_break_workflow",
+   "fieldtype": "Section Break",
+   "label": "Workflow Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "col_break_workflow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "requires_legal_review",
+   "fieldtype": "Check",
+   "label": "Requires Legal Review"
+  },
+  {
+   "default": "0",
+   "fieldname": "legal_review_completed",
+   "fieldtype": "Check",
+   "label": "Legal Review Completed"
+  },
+  {
+   "fieldname": "legal_reviewer",
+   "fieldtype": "Link",
+   "label": "Legal Reviewer",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes & Comments"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "client_notes",
+   "fieldtype": "Text Editor",
+   "label": "Client Notes"
+  },
+  {
+   "fieldname": "provider_notes",
+   "fieldtype": "Text Editor",
+   "label": "Provider Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Agreement Enhanced",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:41.702502",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Agreement Enhanced",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "agreement_title",
+ "track_changes": 1
+}

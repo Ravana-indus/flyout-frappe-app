@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INQ-MATCH-{#####}",
+ "creation": "2025-09-09 15:45:52.928657",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inquiry",
+  "provider",
+  "match_score",
+  "country_score",
+  "language_score",
+  "service_score",
+  "performance_score",
+  "budget_score",
+  "status",
+  "provider_notes",
+  "created_on",
+  "viewed_on",
+  "responded_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "inquiry",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Inquiry",
+   "options": "Inquiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Provider",
+   "options": "Provider",
+   "reqd": 1
+  },
+  {
+   "fieldname": "match_score",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Match Score (%)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country_score",
+   "fieldtype": "Percent",
+   "label": "Country Match Score"
+  },
+  {
+   "fieldname": "language_score",
+   "fieldtype": "Percent",
+   "label": "Language Match Score"
+  },
+  {
+   "fieldname": "service_score",
+   "fieldtype": "Percent",
+   "label": "Service Match Score"
+  },
+  {
+   "fieldname": "performance_score",
+   "fieldtype": "Percent",
+   "label": "Performance Score"
+  },
+  {
+   "fieldname": "budget_score",
+   "fieldtype": "Percent",
+   "label": "Budget Match Score"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nViewed\nInterested\nDeclined\nAccepted"
+  },
+  {
+   "fieldname": "provider_notes",
+   "fieldtype": "Text Editor",
+   "label": "Provider Notes"
+  },
+  {
+   "default": "Now",
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On"
+  },
+  {
+   "fieldname": "viewed_on",
+   "fieldtype": "Datetime",
+   "label": "Viewed On"
+  },
+  {
+   "fieldname": "responded_on",
+   "fieldtype": "Datetime",
+   "label": "Responded On"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:40.901105",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Inquiry Match",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "inquiry",
+ "track_changes": 1
+}

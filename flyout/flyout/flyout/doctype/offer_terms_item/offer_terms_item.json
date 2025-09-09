@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 13:48:25.844633",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "term_title",
+  "term_description",
+  "term_category",
+  "is_mandatory",
+  "order_index",
+  "term_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "term_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Term Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "term_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Term Description"
+  },
+  {
+   "fieldname": "term_category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Term Category",
+   "options": "Service Delivery\nPayment\nIntellectual Property\nLiability\nCancellation\nRevision\nSupport\nOther"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_mandatory",
+   "fieldtype": "Check",
+   "label": "Is Mandatory"
+  },
+  {
+   "fieldname": "order_index",
+   "fieldtype": "Int",
+   "label": "Display Order"
+  },
+  {
+   "fieldname": "term_notes",
+   "fieldtype": "Text",
+   "label": "Internal Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.693925",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Offer Terms Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,602 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:client_name",
+ "creation": "2025-09-09 16:39:21.759645",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information_section",
+  "client_name",
+  "client_id",
+  "column_break_1",
+  "client_type",
+  "registration_date",
+  "status",
+  "contact_information_section",
+  "primary_email",
+  "primary_phone",
+  "column_break_2",
+  "secondary_email",
+  "whatsapp_number",
+  "address_section",
+  "address_line_1",
+  "address_line_2",
+  "column_break_3",
+  "city",
+  "state_province",
+  "column_break_4",
+  "postal_code",
+  "country",
+  "personal_details_section",
+  "date_of_birth",
+  "nationality",
+  "column_break_5",
+  "passport_number",
+  "passport_expiry",
+  "preferences_section",
+  "preferred_language",
+  "preferred_currency",
+  "column_break_6",
+  "time_zone",
+  "communication_preference",
+  "inquiries_tab",
+  "inquiry_summary_section",
+  "total_inquiries",
+  "active_inquiries",
+  "column_break_7",
+  "converted_inquiries",
+  "last_inquiry_date",
+  "inquiry_history_section",
+  "inquiry_history_html",
+  "applications_tab",
+  "application_summary_section",
+  "total_applications",
+  "active_applications",
+  "column_break_8",
+  "completed_applications",
+  "total_amount_paid",
+  "application_history_section",
+  "application_history_html",
+  "communications_tab",
+  "communication_log_section",
+  "communications_html",
+  "documents_tab",
+  "document_summary_section",
+  "total_documents",
+  "verified_documents",
+  "column_break_9",
+  "pending_documents",
+  "last_document_upload",
+  "document_management_section",
+  "documents_html",
+  "notes_tab",
+  "internal_notes_section",
+  "internal_notes",
+  "follow_up_section",
+  "next_follow_up_date",
+  "follow_up_notes",
+  "column_break_10",
+  "assigned_to",
+  "priority",
+  "system_info_tab",
+  "system_information_section",
+  "created_by",
+  "creation_date",
+  "column_break_11",
+  "last_modified_by",
+  "last_modified_date",
+  "portal_access_section",
+  "portal_user",
+  "portal_enabled",
+  "column_break_12",
+  "last_login",
+  "login_count"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "client_type",
+   "fieldtype": "Select",
+   "label": "Client Type",
+   "options": "Individual\nCompany\nOrganization"
+  },
+  {
+   "default": "Today",
+   "fieldname": "registration_date",
+   "fieldtype": "Date",
+   "label": "Registration Date"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive\nSuspended\nBlacklisted"
+  },
+  {
+   "fieldname": "contact_information_section",
+   "fieldtype": "Section Break",
+   "label": "Contact Information"
+  },
+  {
+   "fieldname": "primary_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Primary Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "primary_phone",
+   "fieldtype": "Data",
+   "label": "Primary Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "secondary_email",
+   "fieldtype": "Data",
+   "label": "Secondary Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "whatsapp_number",
+   "fieldtype": "Data",
+   "label": "WhatsApp Number",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "address_section",
+   "fieldtype": "Section Break",
+   "label": "Address Information"
+  },
+  {
+   "fieldname": "address_line_1",
+   "fieldtype": "Data",
+   "label": "Address Line 1"
+  },
+  {
+   "fieldname": "address_line_2",
+   "fieldtype": "Data",
+   "label": "Address Line 2"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "state_province",
+   "fieldtype": "Data",
+   "label": "State/Province"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "Personal Details"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "passport_number",
+   "fieldtype": "Data",
+   "label": "Passport Number"
+  },
+  {
+   "fieldname": "passport_expiry",
+   "fieldtype": "Date",
+   "label": "Passport Expiry"
+  },
+  {
+   "fieldname": "preferences_section",
+   "fieldtype": "Section Break",
+   "label": "Preferences & Settings"
+  },
+  {
+   "fieldname": "preferred_language",
+   "fieldtype": "Select",
+   "label": "Preferred Language",
+   "options": "English\nArabic\nFrench\nSpanish\nGerman\nOther"
+  },
+  {
+   "fieldname": "preferred_currency",
+   "fieldtype": "Link",
+   "label": "Preferred Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "communication_preference",
+   "fieldtype": "Select",
+   "label": "Communication Preference",
+   "options": "Email\nPhone\nWhatsApp\nSMS"
+  },
+  {
+   "fieldname": "inquiries_tab",
+   "fieldtype": "Tab Break",
+   "label": "Inquiries"
+  },
+  {
+   "fieldname": "inquiry_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Inquiry Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_inquiries",
+   "fieldtype": "Int",
+   "label": "Total Inquiries",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active_inquiries",
+   "fieldtype": "Int",
+   "label": "Active Inquiries",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "converted_inquiries",
+   "fieldtype": "Int",
+   "label": "Converted Inquiries",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_inquiry_date",
+   "fieldtype": "Date",
+   "label": "Last Inquiry Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inquiry_history_section",
+   "fieldtype": "Section Break",
+   "label": "Inquiry History"
+  },
+  {
+   "fieldname": "inquiry_history_html",
+   "fieldtype": "HTML",
+   "label": "Inquiry History",
+   "options": "<div id='inquiry-history-list'><p>Loading inquiry history...</p></div>"
+  },
+  {
+   "fieldname": "applications_tab",
+   "fieldtype": "Tab Break",
+   "label": "Applications"
+  },
+  {
+   "fieldname": "application_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Application Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_applications",
+   "fieldtype": "Int",
+   "label": "Total Applications",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active_applications",
+   "fieldtype": "Int",
+   "label": "Active Applications",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "completed_applications",
+   "fieldtype": "Int",
+   "label": "Completed Applications",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount_paid",
+   "fieldtype": "Currency",
+   "label": "Total Amount Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "application_history_section",
+   "fieldtype": "Section Break",
+   "label": "Application History"
+  },
+  {
+   "fieldname": "application_history_html",
+   "fieldtype": "HTML",
+   "label": "Application History",
+   "options": "<div id='application-history-list'><p>Loading application history...</p></div>"
+  },
+  {
+   "fieldname": "communications_tab",
+   "fieldtype": "Tab Break",
+   "label": "Communications"
+  },
+  {
+   "fieldname": "communication_log_section",
+   "fieldtype": "Section Break",
+   "label": "Communication Log"
+  },
+  {
+   "fieldname": "communications_html",
+   "fieldtype": "HTML",
+   "label": "Communications",
+   "options": "<div id='communications-list'><p>Loading communications...</p></div>"
+  },
+  {
+   "fieldname": "documents_tab",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "document_summary_section",
+   "fieldtype": "Section Break",
+   "label": "Document Summary"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_documents",
+   "fieldtype": "Int",
+   "label": "Total Documents",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "verified_documents",
+   "fieldtype": "Int",
+   "label": "Verified Documents",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pending_documents",
+   "fieldtype": "Int",
+   "label": "Pending Verification",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_document_upload",
+   "fieldtype": "Date",
+   "label": "Last Document Upload",
+   "read_only": 1
+  },
+  {
+   "fieldname": "document_management_section",
+   "fieldtype": "Section Break",
+   "label": "Document Management"
+  },
+  {
+   "fieldname": "documents_html",
+   "fieldtype": "HTML",
+   "label": "Documents",
+   "options": "<div id='documents-list'><p>Loading documents...</p></div>"
+  },
+  {
+   "fieldname": "notes_tab",
+   "fieldtype": "Tab Break",
+   "label": "Notes & Follow-ups"
+  },
+  {
+   "fieldname": "internal_notes_section",
+   "fieldtype": "Section Break",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "follow_up_section",
+   "fieldtype": "Section Break",
+   "label": "Follow-up Information"
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow-up Date"
+  },
+  {
+   "fieldname": "follow_up_notes",
+   "fieldtype": "Text",
+   "label": "Follow-up Notes"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "system_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "system_information_section",
+   "fieldtype": "Section Break",
+   "label": "System Information"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "creation_date",
+   "fieldtype": "Datetime",
+   "label": "Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_modified_by",
+   "fieldtype": "Link",
+   "label": "Last Modified By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_modified_date",
+   "fieldtype": "Datetime",
+   "label": "Last Modified Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "portal_access_section",
+   "fieldtype": "Section Break",
+   "label": "Portal Access"
+  },
+  {
+   "fieldname": "portal_user",
+   "fieldtype": "Link",
+   "label": "Portal User",
+   "options": "User"
+  },
+  {
+   "default": "1",
+   "fieldname": "portal_enabled",
+   "fieldtype": "Check",
+   "label": "Portal Access Enabled"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_login",
+   "fieldtype": "Datetime",
+   "label": "Last Portal Login",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "login_count",
+   "fieldtype": "Int",
+   "label": "Total Logins",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:52:52.583938",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Client Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "client_name",
+ "track_changes": 1
+}

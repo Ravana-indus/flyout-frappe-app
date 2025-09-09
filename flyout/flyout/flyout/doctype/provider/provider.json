@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:PROV-{#####}",
+ "creation": "2025-09-09 11:38:34.658804",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_information",
+  "user_id",
+  "company_name",
+  "email",
+  "phone",
+  "column_break_1",
+  "country",
+  "website",
+  "logo",
+  "countries_served",
+  "business_details",
+  "description",
+  "provider_services",
+  "column_break_2",
+  "provider_languages",
+  "country_served",
+  "registration_info",
+  "registration_date",
+  "verification_status",
+  "status",
+  "column_break_3",
+  "subscription_tier",
+  "subscription_performance",
+  "rating",
+  "total_reviews",
+  "column_break_4",
+  "response_time",
+  "success_rate",
+  "supabase_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_information",
+   "fieldtype": "Section Break",
+   "label": "Basic Information"
+  },
+  {
+   "description": "Link to ERPNext User record",
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "description": "Provider company name",
+   "fieldname": "company_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company Name",
+   "reqd": 1
+  },
+  {
+   "description": "Primary email address",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Contact phone number",
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "description": "Company website URL",
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "description": "Company logo",
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "countries_served",
+   "fieldtype": "Small Text",
+   "label": "Countries served"
+  },
+  {
+   "fieldname": "business_details",
+   "fieldtype": "Section Break",
+   "label": "Business Details"
+  },
+  {
+   "description": "Company description and overview",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "provider_services",
+   "fieldtype": "Table",
+   "label": "Services Offered",
+   "options": "Provider Services"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "provider_languages",
+   "fieldtype": "Table",
+   "label": "Languages Supported",
+   "options": "Provider Language"
+  },
+  {
+   "fieldname": "country_served",
+   "fieldtype": "Table",
+   "label": "Country Served",
+   "options": "Country Served"
+  },
+  {
+   "fieldname": "registration_info",
+   "fieldtype": "Section Break",
+   "label": "Registration & Status"
+  },
+  {
+   "default": "now",
+   "fieldname": "registration_date",
+   "fieldtype": "Datetime",
+   "label": "Registration Date"
+  },
+  {
+   "default": "Unverified",
+   "fieldname": "verification_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Verification Status",
+   "options": "Unverified\nPending\nVerified",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nSuspended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscription_tier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Subscription Tier",
+   "options": "Subscription Tier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "subscription_performance",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "default": "0",
+   "fieldname": "rating",
+   "fieldtype": "Float",
+   "label": "Rating",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_reviews",
+   "fieldtype": "Int",
+   "label": "Total Reviews",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Average response time in hours",
+   "fieldname": "response_time",
+   "fieldtype": "Int",
+   "label": "Response Time (hours)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Success rate as percentage",
+   "fieldname": "success_rate",
+   "fieldtype": "Float",
+   "label": "Success Rate",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "description": "Original Supabase UUID for migration reference",
+   "fieldname": "supabase_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Supabase ID",
+   "unique": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:52:56.353036",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Provider",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "company_name",
+ "track_changes": 1
+}

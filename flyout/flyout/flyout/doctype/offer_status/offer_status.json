@@ -1,0 +1,89 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:status_name",
+ "creation": "2025-09-09 13:47:47.125457",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status_name",
+  "description",
+  "color",
+  "is_active",
+  "sort_order",
+  "allows_editing",
+  "is_final"
+ ],
+ "fields": [
+  {
+   "fieldname": "status_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Color",
+   "label": "Color"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "label": "Sort Order"
+  },
+  {
+   "default": "1",
+   "description": "Whether offers in this status can be edited",
+   "fieldname": "allows_editing",
+   "fieldtype": "Check",
+   "label": "Allows Editing"
+  },
+  {
+   "default": "0",
+   "description": "Whether this status represents a final decision (Accepted/Rejected/Expired)",
+   "fieldname": "is_final",
+   "fieldtype": "Check",
+   "label": "Is Final Status"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.997896",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Offer Status",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

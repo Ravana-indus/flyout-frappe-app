@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 14:26:43.523953",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "service_description",
+  "priority_level",
+  "expected_duration",
+  "budget_allocated",
+  "start_date_preference",
+  "completion_deadline",
+  "additional_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Types",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Specific Requirements"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority Level",
+   "options": "Low\nMedium\nHigh\nCritical"
+  },
+  {
+   "fieldname": "expected_duration",
+   "fieldtype": "Float",
+   "label": "Expected Duration (Weeks)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "budget_allocated",
+   "fieldtype": "Currency",
+   "label": "Budget Allocated"
+  },
+  {
+   "fieldname": "start_date_preference",
+   "fieldtype": "Date",
+   "label": "Preferred Start Date"
+  },
+  {
+   "fieldname": "completion_deadline",
+   "fieldtype": "Date",
+   "label": "Completion Deadline"
+  },
+  {
+   "fieldname": "additional_notes",
+   "fieldtype": "Text",
+   "label": "Additional Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:41.593281",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Inquiry Service Request Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

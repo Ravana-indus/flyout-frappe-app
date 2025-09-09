@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 13:48:10.184238",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_type",
+  "service_description",
+  "quantity",
+  "unit_price",
+  "total_price",
+  "estimated_hours",
+  "delivery_timeline",
+  "service_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Types",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Service Description"
+  },
+  {
+   "default": "1",
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Unit Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_hours",
+   "fieldtype": "Float",
+   "label": "Estimated Hours"
+  },
+  {
+   "fieldname": "delivery_timeline",
+   "fieldtype": "Int",
+   "label": "Delivery Timeline (Days)"
+  },
+  {
+   "fieldname": "service_notes",
+   "fieldtype": "Text",
+   "label": "Service Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.840696",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Offer Service Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

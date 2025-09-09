@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 14:06:44.622212",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "signatory_name",
+  "signatory_role",
+  "signatory_type",
+  "email",
+  "phone",
+  "signature_date",
+  "signature_method",
+  "signature_status",
+  "signature_file",
+  "ip_address",
+  "signature_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "signatory_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Signatory Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signatory_role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role/Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "signatory_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Signatory Type",
+   "options": "Provider\nClient\nWitness\nNotary\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "signature_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Signature Date"
+  },
+  {
+   "fieldname": "signature_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Signature Method",
+   "options": "Digital Signature\nWet Signature\nElectronic Signature\nDocuSign\nOther"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "signature_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nSigned\nDeclined\nExpired"
+  },
+  {
+   "fieldname": "signature_file",
+   "fieldtype": "Attach",
+   "label": "Signature File"
+  },
+  {
+   "fieldname": "ip_address",
+   "fieldtype": "Data",
+   "label": "IP Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "signature_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:41.939674",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Agreement Signature Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

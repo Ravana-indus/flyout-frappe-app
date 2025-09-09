@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:language_name",
+ "creation": "2025-09-02 16:36:06.010468",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "language_name",
+  "language_code",
+  "native_name",
+  "is_active",
+  "is_rtl",
+  "region",
+  "country_code",
+  "proficiency_levels",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "LANG-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "language_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Language Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "language_code",
+   "fieldtype": "Data",
+   "label": "Language Code",
+   "options": "ISO 639-1 code (e.g., en, es, fr)",
+   "unique": 1
+  },
+  {
+   "fieldname": "native_name",
+   "fieldtype": "Data",
+   "label": "Native Name",
+   "options": "Language name in its native script"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Active",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rtl",
+   "fieldtype": "Check",
+   "label": "Right to Left",
+   "options": "Check if language is written right to left"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Primary Region"
+  },
+  {
+   "fieldname": "country_code",
+   "fieldtype": "Data",
+   "label": "Country Code",
+   "options": "ISO 3166-1 alpha-2 code"
+  },
+  {
+   "fieldname": "proficiency_levels",
+   "fieldtype": "Text",
+   "label": "Proficiency Levels",
+   "options": "Comma separated levels (e.g., Basic, Intermediate, Advanced, Native)"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:52:57.289794",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Language Master",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

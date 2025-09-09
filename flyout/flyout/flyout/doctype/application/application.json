@@ -1,0 +1,517 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:APP-{client_name}-{####}",
+ "creation": "2025-09-09 13:41:37.104734",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inquiry_reference",
+  "tab_break_basic",
+  "client_id",
+  "client_name",
+  "client_email",
+  "client_phone",
+  "col_break_1",
+  "service_type",
+  "category",
+  "provider",
+  "application_date",
+  "section_break_budget",
+  "budget_min",
+  "budget_max",
+  "col_break_timeline",
+  "timeline_weeks",
+  "deadline",
+  "section_break_status",
+  "application_status",
+  "priority",
+  "col_break_2",
+  "expected_completion_date",
+  "actual_completion_date",
+  "section_break_description",
+  "application_description",
+  "requirements",
+  "skills_needed",
+  "special_requirements",
+  "tab_break_documents",
+  "section_break_doc_checklist",
+  "application_documents",
+  "section_break_attachments",
+  "application_attachments",
+  "tab_break_stages",
+  "section_break_workflow",
+  "application_stages",
+  "section_break_progress",
+  "overall_progress",
+  "current_stage",
+  "tab_break_communication",
+  "section_break_comm_log",
+  "application_communications",
+  "section_break_notes",
+  "internal_notes",
+  "tab_break_fees",
+  "section_break_fee_structure",
+  "application_fees",
+  "section_break_fee_summary",
+  "total_amount",
+  "paid_amount",
+  "col_break_3",
+  "outstanding_amount",
+  "payment_status",
+  "tab_break_additional",
+  "section_break_metadata",
+  "source",
+  "referral_source",
+  "col_break_4",
+  "assigned_to",
+  "created_by",
+  "section_break_tags",
+  "tags",
+  "is_urgent",
+  "col_break_5",
+  "confidential",
+  "follow_up_date",
+  "section_break_inquiry_data",
+  "wizard_data",
+  "inquiry_metadata",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "description": "Reference to the original inquiry that was converted to this application",
+   "fieldname": "inquiry_reference",
+   "fieldtype": "Link",
+   "label": "Original Inquiry",
+   "options": "Inquiry"
+  },
+  {
+   "fieldname": "tab_break_basic",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "description": "Link to client record",
+   "fieldname": "client_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_phone",
+   "fieldtype": "Data",
+   "label": "Client Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Type",
+   "options": "Service Types",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Service Types"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "label": "Assigned Provider",
+   "options": "Provider"
+  },
+  {
+   "default": "Today",
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_budget",
+   "fieldtype": "Section Break",
+   "label": "Budget & Timeline"
+  },
+  {
+   "fieldname": "budget_min",
+   "fieldtype": "Currency",
+   "label": "Budget Min"
+  },
+  {
+   "fieldname": "budget_max",
+   "fieldtype": "Currency",
+   "label": "Budget Max"
+  },
+  {
+   "fieldname": "col_break_timeline",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "timeline_weeks",
+   "fieldtype": "Float",
+   "label": "Expected Timeline (Weeks)",
+   "precision": "1"
+  },
+  {
+   "fieldname": "deadline",
+   "fieldtype": "Date",
+   "label": "Deadline"
+  },
+  {
+   "fieldname": "section_break_status",
+   "fieldtype": "Section Break",
+   "label": "Status & Timeline"
+  },
+  {
+   "default": "New",
+   "fieldname": "application_status",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Application Status",
+   "options": "Application Status",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_completion_date",
+   "fieldtype": "Date",
+   "label": "Expected Completion Date"
+  },
+  {
+   "fieldname": "actual_completion_date",
+   "fieldtype": "Date",
+   "label": "Actual Completion Date"
+  },
+  {
+   "fieldname": "section_break_description",
+   "fieldtype": "Section Break",
+   "label": "Application Details"
+  },
+  {
+   "description": "Detailed description of the application requirements",
+   "fieldname": "application_description",
+   "fieldtype": "Text Editor",
+   "label": "Application Description"
+  },
+  {
+   "fieldname": "requirements",
+   "fieldtype": "Text",
+   "label": "Requirements",
+   "options": "Comma separated list of requirements"
+  },
+  {
+   "fieldname": "skills_needed",
+   "fieldtype": "Text",
+   "label": "Skills Needed",
+   "options": "Comma separated list of skills"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "tab_break_documents",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "section_break_doc_checklist",
+   "fieldtype": "Section Break",
+   "label": "Document Checklist"
+  },
+  {
+   "fieldname": "application_documents",
+   "fieldtype": "Table",
+   "label": "Required Documents",
+   "options": "Application Document Item"
+  },
+  {
+   "fieldname": "section_break_attachments",
+   "fieldtype": "Section Break",
+   "label": "File Attachments"
+  },
+  {
+   "fieldname": "application_attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Application Attachment Item"
+  },
+  {
+   "fieldname": "tab_break_stages",
+   "fieldtype": "Tab Break",
+   "label": "Process Stages"
+  },
+  {
+   "fieldname": "section_break_workflow",
+   "fieldtype": "Section Break",
+   "label": "Application Workflow"
+  },
+  {
+   "fieldname": "application_stages",
+   "fieldtype": "Table",
+   "label": "Process Stages",
+   "options": "Application Stage Item"
+  },
+  {
+   "fieldname": "section_break_progress",
+   "fieldtype": "Section Break",
+   "label": "Progress Summary"
+  },
+  {
+   "description": "Auto-calculated based on completed stages",
+   "fieldname": "overall_progress",
+   "fieldtype": "Percent",
+   "label": "Overall Progress (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_stage",
+   "fieldtype": "Data",
+   "label": "Current Stage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_communication",
+   "fieldtype": "Tab Break",
+   "label": "Communication"
+  },
+  {
+   "fieldname": "section_break_comm_log",
+   "fieldtype": "Section Break",
+   "label": "Communication Log"
+  },
+  {
+   "fieldname": "application_communications",
+   "fieldtype": "Table",
+   "label": "Communications",
+   "options": "Application Communication Item"
+  },
+  {
+   "fieldname": "section_break_notes",
+   "fieldtype": "Section Break",
+   "label": "Internal Notes"
+  },
+  {
+   "description": "Private notes for internal team use",
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "fieldname": "tab_break_fees",
+   "fieldtype": "Tab Break",
+   "label": "Fees & Payments"
+  },
+  {
+   "fieldname": "section_break_fee_structure",
+   "fieldtype": "Section Break",
+   "label": "Fee Structure"
+  },
+  {
+   "fieldname": "application_fees",
+   "fieldtype": "Table",
+   "label": "Application Fees",
+   "options": "Application Fee Item"
+  },
+  {
+   "fieldname": "section_break_fee_summary",
+   "fieldtype": "Section Break",
+   "label": "Fee Summary"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Total Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nPartial\nPaid\nOverdue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tab_break_additional",
+   "fieldtype": "Tab Break",
+   "label": "Additional Info"
+  },
+  {
+   "fieldname": "section_break_metadata",
+   "fieldtype": "Section Break",
+   "label": "Application Metadata"
+  },
+  {
+   "default": "Inquiry Conversion",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Application Source",
+   "options": "Website\nReferral\nDirect Contact\nSocial Media\nAdvertisement\nOther\nInquiry Conversion"
+  },
+  {
+   "depends_on": "eval:doc.source=='Referral'",
+   "fieldname": "referral_source",
+   "fieldtype": "Data",
+   "label": "Referral Source"
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "default": "__user",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tags",
+   "fieldtype": "Section Break",
+   "label": "Tags & Categories"
+  },
+  {
+   "description": "Comma-separated tags for easy filtering",
+   "fieldname": "tags",
+   "fieldtype": "Data",
+   "label": "Tags"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_urgent",
+   "fieldtype": "Check",
+   "label": "Mark as Urgent"
+  },
+  {
+   "fieldname": "col_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "confidential",
+   "fieldtype": "Check",
+   "label": "Confidential Application"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Next Follow-up Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_inquiry_data",
+   "fieldtype": "Section Break",
+   "label": "Inquiry Data"
+  },
+  {
+   "fieldname": "wizard_data",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Wizard Data",
+   "options": "JSON data from inquiry wizard"
+  },
+  {
+   "fieldname": "inquiry_metadata",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Inquiry Metadata",
+   "options": "Additional metadata from inquiry"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Application",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:43.064963",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Application",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-02 16:40:45.661067",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "config_key",
+  "config_value",
+  "category",
+  "description",
+  "is_sensitive",
+  "data_type",
+  "environment"
+ ],
+ "fields": [
+  {
+   "fieldname": "config_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Config Key",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "config_value",
+   "fieldtype": "Text",
+   "label": "Config Value"
+  },
+  {
+   "default": "System",
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "System\nEmail\nPayment\nIntegration\nSecurity"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_sensitive",
+   "fieldtype": "Check",
+   "label": "Is Sensitive"
+  },
+  {
+   "default": "String",
+   "fieldname": "data_type",
+   "fieldtype": "Select",
+   "label": "Data Type",
+   "options": "String\nInteger\nFloat\nBoolean\nJSON"
+  },
+  {
+   "default": "All",
+   "fieldname": "environment",
+   "fieldtype": "Select",
+   "label": "Environment",
+   "options": "All\nProduction\nDevelopment\nStaging"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:52:56.939803",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "System Config",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

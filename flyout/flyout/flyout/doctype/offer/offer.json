@@ -1,0 +1,462 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:OFF-{provider}-{client_name}-{####}",
+ "creation": "2025-09-09 13:49:30.404949",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "offer_title",
+  "tab_break_basic",
+  "inquiry_reference",
+  "country",
+  "service_type",
+  "col_break_1",
+  "provider",
+  "client",
+  "client_name",
+  "client_email",
+  "col_break_2",
+  "offer_date",
+  "valid_until",
+  "offer_status",
+  "priority",
+  "section_break_description",
+  "service_offered",
+  "offer_summary",
+  "detailed_description",
+  "special_notes",
+  "tab_break_pricing",
+  "subtotal",
+  "col_break_pricing",
+  "discount_percentage",
+  "discount_amount",
+  "col_break_pricing2",
+  "tax_amount",
+  "total_amount",
+  "currency",
+  "tab_break_payment",
+  "payment_method",
+  "payment_shedule",
+  "terms_and_conditions",
+  "col_break_payment",
+  "bank_details",
+  "payment_instructions",
+  "tab_break_delivery",
+  "estimated_delivery",
+  "delivery_method",
+  "col_break_delivery",
+  "delivery_address",
+  "delivery_notes",
+  "tab_break_followup",
+  "next_follow_up",
+  "assigned_to",
+  "communication_log",
+  "col_break_followup",
+  "follow_up_notes",
+  "tab_break_workflow",
+  "workflow_status",
+  "sent_date",
+  "response_deadline",
+  "col_break_workflow",
+  "accepted_date",
+  "rejected_date",
+  "rejection_reason",
+  "section_break_internal",
+  "internal_notes",
+  "created_by",
+  "col_break_internal",
+  "approved_by",
+  "approval_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "description": "Auto-generated title for easy identification",
+   "fieldname": "offer_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Offer Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tab_break_basic",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "description": "Reference to the original inquiry",
+   "fieldname": "inquiry_reference",
+   "fieldtype": "Link",
+   "label": "Original Inquiry",
+   "options": "Inquiry"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Link",
+   "label": "Service Type",
+   "options": "Service Types"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Provider",
+   "options": "Provider",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "offer_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Offer Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Valid Until",
+   "reqd": 1
+  },
+  {
+   "fieldname": "offer_status",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Offer Status",
+   "options": "Offer Status",
+   "reqd": 1
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent"
+  },
+  {
+   "fieldname": "section_break_description",
+   "fieldtype": "Section Break",
+   "label": "Offer Description"
+  },
+  {
+   "fieldname": "service_offered",
+   "fieldtype": "Table",
+   "label": "Service Offered",
+   "options": "Offer Service Item"
+  },
+  {
+   "description": "Brief summary of the offer",
+   "fieldname": "offer_summary",
+   "fieldtype": "Text Editor",
+   "label": "Offer Summary"
+  },
+  {
+   "fieldname": "detailed_description",
+   "fieldtype": "Text Editor",
+   "label": "Detailed Description"
+  },
+  {
+   "fieldname": "special_notes",
+   "fieldtype": "Text",
+   "label": "Special Notes"
+  },
+  {
+   "fieldname": "tab_break_pricing",
+   "fieldtype": "Tab Break",
+   "label": "Pricing Summary"
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_pricing",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discount_percentage",
+   "fieldtype": "Percent",
+   "label": "Discount %"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_pricing2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "LKR",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "tab_break_payment",
+   "fieldtype": "Tab Break",
+   "label": "Payment Terms"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "Bank Transfer\nCredit Card\nPayPal\nCrypto\nCash\nCheck\nOther"
+  },
+  {
+   "fieldname": "payment_shedule",
+   "fieldtype": "Table",
+   "label": "Payment Shedule",
+   "options": "Offer Payment Schedule"
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "Table",
+   "label": "Terms And Conditions",
+   "options": "Offer Terms Item"
+  },
+  {
+   "fieldname": "col_break_payment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_details",
+   "fieldtype": "Text",
+   "label": "Bank Details"
+  },
+  {
+   "fieldname": "payment_instructions",
+   "fieldtype": "Text Editor",
+   "label": "Payment Instructions"
+  },
+  {
+   "fieldname": "tab_break_delivery",
+   "fieldtype": "Tab Break",
+   "label": "Delivery Information"
+  },
+  {
+   "fieldname": "estimated_delivery",
+   "fieldtype": "Int",
+   "label": "Estimated Delivery (Days)"
+  },
+  {
+   "fieldname": "delivery_method",
+   "fieldtype": "Select",
+   "label": "Delivery Method",
+   "options": "Digital Delivery\nPhysical Delivery\nMixed\nOn-site\nRemote"
+  },
+  {
+   "fieldname": "col_break_delivery",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Text",
+   "label": "Delivery Address"
+  },
+  {
+   "fieldname": "delivery_notes",
+   "fieldtype": "Text",
+   "label": "Delivery Notes"
+  },
+  {
+   "fieldname": "tab_break_followup",
+   "fieldtype": "Tab Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "next_follow_up",
+   "fieldtype": "Date",
+   "label": "Next Follow-up Date"
+  },
+  {
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "communication_log",
+   "fieldtype": "Table",
+   "label": "Communication Log",
+   "options": "Offer Communication Item"
+  },
+  {
+   "fieldname": "col_break_followup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_notes",
+   "fieldtype": "Text Editor",
+   "label": "Follow-up Notes"
+  },
+  {
+   "fieldname": "tab_break_workflow",
+   "fieldtype": "Tab Break",
+   "label": "Workflow & Status"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "workflow_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Workflow Status",
+   "options": "Draft\nPending Review\nSent to Client\nUnder Negotiation\nAccepted\nRejected\nExpired\nCancelled"
+  },
+  {
+   "fieldname": "sent_date",
+   "fieldtype": "Datetime",
+   "label": "Sent Date"
+  },
+  {
+   "fieldname": "response_deadline",
+   "fieldtype": "Date",
+   "label": "Response Deadline"
+  },
+  {
+   "fieldname": "col_break_workflow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accepted_date",
+   "fieldtype": "Datetime",
+   "label": "Accepted Date"
+  },
+  {
+   "fieldname": "rejected_date",
+   "fieldtype": "Datetime",
+   "label": "Rejected Date"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "section_break_internal",
+   "fieldtype": "Section Break",
+   "label": "Internal Information"
+  },
+  {
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Internal Notes"
+  },
+  {
+   "default": "__user",
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "col_break_internal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_by",
+   "fieldtype": "Link",
+   "label": "Approved By",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_date",
+   "fieldtype": "Datetime",
+   "label": "Approval Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Offer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.433805",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Offer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "offer_title",
+ "track_changes": 1
+}

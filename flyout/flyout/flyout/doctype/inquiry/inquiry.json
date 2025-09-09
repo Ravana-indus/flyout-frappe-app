@@ -1,0 +1,309 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:INQ-{client_name}-{####}",
+ "creation": "2025-09-09 14:31:17.101017",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_break_basic",
+  "client_id",
+  "client_name",
+  "client_email",
+  "client_phone",
+  "col_break_1",
+  "inquiry_date",
+  "priority",
+  "status",
+  "section_break_description",
+  "description",
+  "col_break_2",
+  "special_requirements",
+  "section_break_budget",
+  "budget_min",
+  "budget_max",
+  "col_break_3",
+  "currency",
+  "budget_flexibility",
+  "tab_break_services",
+  "service_requests",
+  "tab_break_qualifications",
+  "section_break_education",
+  "education_qualifications",
+  "section_break_languages",
+  "language_qualifications",
+  "tab_break_documents",
+  "documents",
+  "tab_break_matching",
+  "section_break_criteria",
+  "preferred_countries",
+  "alternative_countries",
+  "col_break_4",
+  "required_languages",
+  "alternative_languages",
+  "tab_break_conversion",
+  "conversion_date",
+  "col_break_5",
+  "conversion_notes",
+  "selected_provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_break_basic",
+   "fieldtype": "Tab Break",
+   "label": "Basic Information"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Client",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_email",
+   "fieldtype": "Data",
+   "label": "Client Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "client_phone",
+   "fieldtype": "Data",
+   "label": "Client Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "inquiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Inquiry Date"
+  },
+  {
+   "default": "Medium",
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Low\nMedium\nHigh\nUrgent",
+   "reqd": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nUnder Review\nMatched\nConverted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_description",
+   "fieldtype": "Section Break",
+   "label": "Inquiry Details"
+  },
+  {
+   "description": "Detailed description of the inquiry",
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "special_requirements",
+   "fieldtype": "Text Editor",
+   "label": "Special Requirements"
+  },
+  {
+   "fieldname": "section_break_budget",
+   "fieldtype": "Section Break",
+   "label": "Budget Information"
+  },
+  {
+   "fieldname": "budget_min",
+   "fieldtype": "Currency",
+   "label": "Budget Min"
+  },
+  {
+   "fieldname": "budget_max",
+   "fieldtype": "Currency",
+   "label": "Budget Max"
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "USD",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "default": "Somewhat Flexible",
+   "fieldname": "budget_flexibility",
+   "fieldtype": "Select",
+   "label": "Budget Flexibility",
+   "options": "Strict\nSomewhat Flexible\nVery Flexible"
+  },
+  {
+   "fieldname": "tab_break_services",
+   "fieldtype": "Tab Break",
+   "label": "Service Requests"
+  },
+  {
+   "fieldname": "service_requests",
+   "fieldtype": "Table",
+   "label": "Service Requests",
+   "options": "Inquiry Service Request Item"
+  },
+  {
+   "fieldname": "tab_break_qualifications",
+   "fieldtype": "Tab Break",
+   "label": "Client Qualifications"
+  },
+  {
+   "fieldname": "section_break_education",
+   "fieldtype": "Section Break",
+   "label": "Education Qualifications"
+  },
+  {
+   "fieldname": "education_qualifications",
+   "fieldtype": "Table",
+   "label": "Education Qualifications",
+   "options": "Inquiry Education Qualification Item"
+  },
+  {
+   "fieldname": "section_break_languages",
+   "fieldtype": "Section Break",
+   "label": "Language Qualifications"
+  },
+  {
+   "fieldname": "language_qualifications",
+   "fieldtype": "Table",
+   "label": "Language Qualifications",
+   "options": "Inquiry Language Qualification Item"
+  },
+  {
+   "fieldname": "tab_break_documents",
+   "fieldtype": "Tab Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Uploaded Documents",
+   "options": "Inquiry Document Item"
+  },
+  {
+   "fieldname": "tab_break_matching",
+   "fieldtype": "Tab Break",
+   "label": "Provider Matching"
+  },
+  {
+   "fieldname": "section_break_criteria",
+   "fieldtype": "Section Break",
+   "label": "Matching Criteria"
+  },
+  {
+   "description": "Primary country preference",
+   "fieldname": "preferred_countries",
+   "fieldtype": "Link",
+   "label": "Preferred Countries",
+   "options": "Country"
+  },
+  {
+   "description": "Comma-separated list of alternative countries",
+   "fieldname": "alternative_countries",
+   "fieldtype": "Text",
+   "label": "Alternative Countries"
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Primary language requirement",
+   "fieldname": "required_languages",
+   "fieldtype": "Link",
+   "label": "Required Languages",
+   "options": "Language"
+  },
+  {
+   "description": "Comma-separated list of alternative languages",
+   "fieldname": "alternative_languages",
+   "fieldtype": "Text",
+   "label": "Alternative Languages"
+  },
+  {
+   "fieldname": "tab_break_conversion",
+   "fieldtype": "Tab Break",
+   "label": "Conversion"
+  },
+  {
+   "fieldname": "conversion_date",
+   "fieldtype": "Date",
+   "label": "Conversion Date"
+  },
+  {
+   "fieldname": "col_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "conversion_notes",
+   "fieldtype": "Text Editor",
+   "label": "Conversion Notes"
+  },
+  {
+   "fieldname": "selected_provider",
+   "fieldtype": "Link",
+   "label": "Selected Provider",
+   "options": "Provider"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:52:53.283684",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Inquiry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-09 14:06:35.139921",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "milestone_title",
+  "milestone_description",
+  "target_date",
+  "milestone_amount",
+  "payment_percentage",
+  "milestone_status",
+  "completion_date",
+  "deliverables",
+  "milestone_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "milestone_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Milestone Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "milestone_description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Target Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "milestone_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Milestone Amount"
+  },
+  {
+   "fieldname": "payment_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Payment %"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "milestone_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nIn Progress\nCompleted\nDelayed\nCancelled"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "deliverables",
+   "fieldtype": "Text",
+   "label": "Deliverables"
+  },
+  {
+   "fieldname": "milestone_notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.007685",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Agreement Milestone Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

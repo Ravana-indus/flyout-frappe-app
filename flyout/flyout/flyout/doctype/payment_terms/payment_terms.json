@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:term_name",
+ "creation": "2025-09-09 13:47:55.074539",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "term_name",
+  "description",
+  "payment_percentage",
+  "due_days",
+  "is_advance",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "term_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Term Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "description": "Percentage of total amount for this term",
+   "fieldname": "payment_percentage",
+   "fieldtype": "Percent",
+   "label": "Payment Percentage"
+  },
+  {
+   "description": "Number of days from offer acceptance when payment is due",
+   "fieldname": "due_days",
+   "fieldtype": "Int",
+   "label": "Due Days"
+  },
+  {
+   "default": "0",
+   "description": "Whether this is an advance payment term",
+   "fieldname": "is_advance",
+   "fieldtype": "Check",
+   "label": "Is Advance Payment"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-09 16:53:42.924630",
+ "modified_by": "Administrator",
+ "module": "Flyout",
+ "name": "Payment Terms",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
