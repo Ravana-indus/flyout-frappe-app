@@ -1,0 +1,5 @@
+recursive-include flyout *.json *.md *.txt *.py *.js *.css *.scss *.svg *.html *.xml *.csv *.yml *.yaml
+recursive-include flyout/public *
+recursive-include flyout/templates *
+include license.txt
+include README.md
